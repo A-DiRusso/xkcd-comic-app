@@ -1,8 +1,8 @@
 # XKCD Comic App 
 
 React App that displays the current XKCD comic on a home page.
-![Home Screen] (/images/homescreen.png)
-Format ![Alt Text](url)
+![Home Screen] (https://raw.githubusercontent.com/A-DiRusso/xkcd-comic-app/master/images/homescreen.png?token=AK6ZSL7VVSJNS34SG2IYA6S5X4IBM)
+
 
 # Instructions
 
