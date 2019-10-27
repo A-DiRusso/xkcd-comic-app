@@ -9,7 +9,6 @@ export default class Home extends Component {
     async componentDidMount() {
         const url = `https://xkcd.now.sh/?comic=latest`;
         const data = await axios.get(url);
-        console.log(data.data);
         this.setState({
             comic: data.data
         })
@@ -25,7 +24,7 @@ export default class Home extends Component {
                         to='/'
                         className='latest'
                     >
-                        Home
+                        Latest
                     </Link>
                 </li>
                 <li>
