@@ -1,7 +1,7 @@
 # XKCD Comic App 
 
 React App that displays the current XKCD comic on a home page.
-![Home Screen] (https://raw.githubusercontent.com/A-DiRusso/xkcd-comic-app/master/images/homescreen.png?token=AK6ZSL4M6GWQ4KRRBY6XEJC5X4KZQ)
+![Home Screen](https://raw.githubusercontent.com/A-DiRusso/xkcd-comic-app/master/images/homescreen.png?token=AK6ZSLYVH7WVJUKFPFOJXFK5X4LNA)
 
 And on a search page will let you know if you are out of bounds for the input
 ![Unhappy Path](https://raw.githubusercontent.com/A-DiRusso/xkcd-comic-app/master/images/unhappysearch.png?token=AK6ZSLYK5AIHOWLQ4AKMTAK5X4K6K)
