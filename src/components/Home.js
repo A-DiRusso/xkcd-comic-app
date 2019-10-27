@@ -1,4 +1,5 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import axios from 'axios';
 
 
@@ -16,9 +17,31 @@ export default class Home extends Component {
     }
     render() {
         const { img, title: alt, alt: title } = this.state.comic;
+
+        const links = 
+            <ul>
+                <li>
+                    <Link 
+                        to='/'
+                        className='latest'
+                    >
+                        Home
+                    </Link>
+                </li>
+                <li>
+                    <Link 
+                        to='/search'
+                        className='search'
+                    >
+                        Search
+                    </Link>
+                </li>
+            </ul>
         return <>
             <h1>Home</h1>
-            <img 
+            {links}
+            <img
+                className="latestImage" 
                 src={img}
                 alt={alt}
                 title={title}
