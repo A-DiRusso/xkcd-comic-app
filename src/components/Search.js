@@ -1,3 +1,4 @@
+//Search imports follow the same need/use pattern of Home.js
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
@@ -11,18 +12,22 @@ export default class Seach extends Component {
 
 
     handleSubmit = async (e) => {
+        //we don't want the event to fire on page load
         e.preventDefault();
+        // on submit we access the dom to get the entered value for id searc-term
         const comic = document.querySelector('#search-term').value;
+        // we are controlling the imput to be a number between 1 and 2219 per the instructions
         if (comic >= 1 && comic <= 2219) {
             const url = `https://xkcd.now.sh/?comic=${comic}`;
             const data = await axios.get(url);
-            console.log(data.data);
+            //we should really put some error handling here incase the API is down 
+            //setState with the returned promise, and make sure no warning error shows
             this.setState({
                 comic: data.data,
                 warning: false,
             })
+            //this is the bad input path
         } else {
-            console.log('NaN')
             this.setState({
                 warning: true,  
                 comic: [],             
@@ -32,7 +37,8 @@ export default class Seach extends Component {
 
 
     render() {
-        const { img, title: alt, alt: title } = this.state.comic;
+        // addtionally destructuring out the warning boolean
+        const { comic: { img, title: alt, alt: title }, warning } = this.state;
 
         const links = 
             <ul>
@@ -54,11 +60,12 @@ export default class Seach extends Component {
                 </li>
             </ul>;
 
-
+        // this JSX returns a warning message or the happy path based on state
+        // the imput form persists 
         return <>
             <h1>Search</h1>
             {links}
-            {this.state.warning
+            {warning
             ?
             <h1>Please enter a number between 1 and 2219</h1>
             :
