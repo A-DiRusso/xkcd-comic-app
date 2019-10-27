@@ -1,6 +1,8 @@
-# Support Engineer Challenge
+# XKCD Comic App 
 
-Welcome! If you are reading this, it's likely because you want to work with us. If you have already applied, then continue on. If not, check out our [careers](https://newstorycharity.org/careers/) page to see our available openings. No software developer opening? Email us anyway!
+React App that displays the current XKCD comic on a home page.
+![Home Screen] (/images/homescreen.png)
+Format ![Alt Text](url)
 
 # Instructions
 
