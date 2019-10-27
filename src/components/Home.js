@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
+import './styles.css';
 
 
 export default class Home extends Component {
@@ -39,13 +40,15 @@ export default class Home extends Component {
         return <>
             <h1>Home</h1>
             {links}
-            <img
-                className="latestImage" 
-                src={img}
-                alt={alt}
-                title={title}
-            />
-            <div>
+            <div className="comicContainer">
+                <img
+                    className="latestImage" 
+                    src={img}
+                    alt={alt}
+                    title={title}
+                />
+            </div>
+            <div className="imageTitle">
                 {title}
             </div>
         </>
