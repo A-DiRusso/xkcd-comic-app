@@ -1,0 +1,47 @@
+body{
+    background-color: rgb(133, 197, 235);
+    color: rgba(255, 0, 212, 0.658);
+}
+
+ul{
+    display: flex;
+    justify-content: flex-end;
+}
+
+li {
+    list-style-type: none;
+    padding-right: 3%;
+}
+
+.searchForm {
+    display: grid;
+    grid-template-columns: 20vw 30vw 3vw 30vw 20vw;
+    grid-template-rows: 25% 100px auto;
+}
+
+.searchSubmit {
+    background-color: rgb(255, 0, 212);
+    color: white;
+    font-size: 1em;
+    grid-column-start: 4;
+    grid-column-end: 5;
+}
+
+.searchInput {
+    grid-column-start: 2;
+    grid-column-end: 3;
+}
+
+.comicContainer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+
+.imageTitle {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+}

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
-import warning from 'tiny-warning';
+import './styles.css';
 
 
 
@@ -64,7 +64,7 @@ export default class Seach extends Component {
             :
             <div></div>
             }
-            <form onSubmit={this.handleSubmit}>
+            <form className='searchForm' onSubmit={this.handleSubmit}>
                 <input
                     id='search-term'
                     placeholder='Please enter a number'
@@ -76,14 +76,15 @@ export default class Seach extends Component {
                     value="Search for a comic"
                 />
             </form>
-
-            <img
-                className="searchImage" 
-                src={img}
-                alt={alt}
-                title={title}
-            />
-            <div>
+            <div className="comicContainer">
+                <img
+                    className="searchImage" 
+                    src={img}
+                    alt={alt}
+                    title={title}
+                />
+            </div>
+            <div className="imageTitle">
                 {title}
             </div>
         </>
